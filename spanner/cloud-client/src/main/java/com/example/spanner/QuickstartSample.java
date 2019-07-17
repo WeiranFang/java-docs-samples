@@ -45,8 +45,8 @@ public class QuickstartSample {
     String databaseId = args[1];
     try {
       // Creates a database client
-      DatabaseClient dbClient = spanner.getDatabaseClient(DatabaseId.of(
-          options.getProjectId(), instanceId, databaseId));
+      DatabaseClient dbClient =
+          spanner.getDatabaseClient(DatabaseId.of(options.getProjectId(), instanceId, databaseId));
       // Queries the database
       ResultSet resultSet = dbClient.singleUse().executeQuery(Statement.of("SELECT 1"));
 
@@ -55,9 +55,11 @@ public class QuickstartSample {
       while (resultSet.next()) {
         System.out.printf("%d\n\n", resultSet.getLong(0));
       }
+      System.out.println("\nDONE");
     } finally {
       // Closes the client which will free up the resources used
       spanner.close();
+      System.exit(0);
     }
   }
 }

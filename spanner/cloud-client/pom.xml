@@ -42,7 +42,7 @@ limitations under the License.
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-bom</artifactId>
-        <version>0.84.0-alpha</version>
+        <version>0.100.0-alpha</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -86,28 +86,6 @@ limitations under the License.
         <groupId>io.opencensus</groupId>
         <artifactId>opencensus-contrib-zpages</artifactId>
         <version>${opencensus.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>io.opencensus</groupId>
-        <artifactId>opencensus-exporter-trace-stackdriver</artifactId>
-        <version>${opencensus.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>com.google.cloud</groupId>
-            <artifactId>google-cloud-trace</artifactId>
-          </exclusion>
-        </exclusions>
-    </dependency>
-    <dependency>
-        <groupId>io.opencensus</groupId>
-        <artifactId>opencensus-exporter-stats-stackdriver</artifactId>
-        <version>${opencensus.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>com.google.cloud</groupId>
-            <artifactId>google-cloud-monitoring</artifactId>
-          </exclusion>
-        </exclusions>
     </dependency>
     <dependency>
         <groupId>io.opencensus</groupId>
